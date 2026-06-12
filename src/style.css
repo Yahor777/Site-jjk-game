@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Inter:wght@500;700;900&display=swap');
+:root { font-family: Inter, system-ui, sans-serif; color: white; background: #050711; color-scheme: dark; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body, #app, #game-container { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #050711; }
+body { touch-action: none; user-select: none; overscroll-behavior: none; }
+canvas { display: block; }
+#game-container { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+#rotate-device { position: fixed; inset: 0; z-index: 999; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; background: radial-gradient(circle at 50% 40%, #16264b, #070914 65%); }
+#rotate-device strong { font: 24px 'Russo One', sans-serif; }
+#rotate-device span { color: #94a3bb; font-size: 14px; }
+.rotate-icon { font-size: 58px; color: #48f0d1; animation: tilt 1.7s ease-in-out infinite; }
+@keyframes tilt { 50% { transform: rotate(90deg); } }
+@media (orientation: portrait) and (max-width: 900px) { #rotate-device { display: flex; } }
